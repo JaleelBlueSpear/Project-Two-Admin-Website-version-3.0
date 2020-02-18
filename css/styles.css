@@ -8,6 +8,7 @@ body {
     height: 100%;
 }
 
+
 .page {
     width: 100%;
     height: 100%;
@@ -115,6 +116,8 @@ body {
     text-decoration: none;
     color: #ecf0f1;
 }
+
+
 
 .main {
     width: 100%;
@@ -762,4 +765,137 @@ body {
         align-items: center;
         color: #ecf0f1;
     }
+}
+
+@media screen and (min-width: 760px) {
+    html {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    .page {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr repeat(2 , 3fr) 1fr;
+        grid-template-areas: "header header header"
+                                         "main main main"
+                                         "main main main"
+                                         "footer footer footer";
+    }
+
+    .header-links {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header-links-container {
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+
+    .header-title-content {
+        font-size: 1.8rem;
+    }
+
+    .header-title-content-first-text {
+        margin-right: .9rem;
+    }
+
+    .header-title-hamburger-menu {
+        font-size: 1.8rem;
+    }
+
+    .header-nav {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header-nav-container {
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+
+
+    .nav-container-links-link {
+        width: 80%;
+        font-size: 1.3rem;
+    }
+
+    .main {
+        display: grid;
+        margin-top: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "Image Personal"
+                                         "contact contact"
+                                         "sales sales";
+            grid-row-gap: 2rem;
+    }
+
+    .main-image {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        grid-area: Image;
+        justify-content: space-between;
+    }
+
+    .main-image-img {
+        margin-top: 1rem;
+        width: 20%;
+    }
+
+    .main-image-title {
+        width: 100%;
+        font-size: 1.3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #263238;
+        color: #ecf0f1;
+    }
+
+    .main-details {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        grid-area: Personal;
+    }
+
+    .main-contact {
+        height: 100%;
+        margin: 0;
+        grid-area: contact;
+    }
+
+    .main-contact-info {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .main-contact-buttons-button {
+        width: 20%;
+        font-size: 1.2rem;
+    }
+
+    .main-sales {
+        margin-top: 0;
+        height: 100%;
+        grid-area: sales;
+    }
+
+
 }
